@@ -9,7 +9,7 @@ def index():
     return jsonify({"Choo Choo": "Welcome to your Flask app Git test 🚅"})
 
 @app.route('/tester')
-def index():
+def fixer():
     return jsonify({"Choo Choo": "test rioute for tester nest"})
 
 
