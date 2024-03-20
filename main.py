@@ -6,11 +6,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return jsonify({"Choo Choo": "Welcome to your Flask app Git test 🚅"})
+    response = jsonify({'some': 'data'})
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 @app.route('/tester')
 def fixer():
-    return jsonify({"Choo Choo": "test rioute for tester nest"})
+    return jsonify({"Choo Choo": "test rioute for tester nest","servicepass":"test"})
 
 
 if __name__ == '__main__':
