@@ -1,5 +1,4 @@
 from flask import Flask, jsonify
-import psycopg
 import os
 from notion_client import Client
 
@@ -16,7 +15,6 @@ def index():
     response.headers.add('Access-Control-Allow-Origin', '*')
     
     return response
-
 
 @app.route('/tester')
 def fixer():
